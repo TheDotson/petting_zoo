@@ -48,8 +48,9 @@ def main():
 
 
   #Herpetarium
-  leon = Alligator('Leon', 'American', "chicken")
+  leon = Alligator('Leon', 'American', "chicken", 12345)
   print(leon.feed())
+  print(leon.chip_number)
   tropical_wonders.add_animal(leon)
 
   lenny = Dart_Frog('Lenny', 'Strawberry Poison', 'flies')
@@ -61,5 +62,8 @@ def main():
   varmint_village.get_animals()
   tropical_wonders.get_animals()
   river_life.get_animals()
+  print("Last Varmint added:", varmint_village.last_critter_added)
+  print("Last Wonder added:", tropical_wonders.last_critter_added)
+  print("Last Denizen added:", river_life.last_critter_added)
 
 main()

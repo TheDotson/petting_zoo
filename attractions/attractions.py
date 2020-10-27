@@ -13,6 +13,10 @@ class PettingZoo:
     for animal in self.animals:
       print(f'\t* {animal.name} the {animal.species}')
 
+  @property #getter
+  def last_critter_added(self):
+    return f"\t* {self.animals[-1].name} the {self.animals[-1].species}"
+
 class Herpetarium:
 
   def __init__(self, name):
@@ -27,6 +31,11 @@ class Herpetarium:
     print(f"{self.attraction_name} is where you'll find {self.description}, like:")
     for animal in self.animals:
       print(f'\t* {animal.name} the {animal.species}')
+
+  @property #getter
+  def last_critter_added(self):
+    return f"\t* {self.animals[-1].name} the {self.animals[-1].species}"
+
 
 
 
@@ -44,3 +53,7 @@ class RiverExhibit:
     print(f"{self.attraction_name} is where you'll find {self.description}, like:")
     for animal in self.animals:
       print(f'\t* {animal.name} the {animal.species}')
+
+  @property #getter
+  def last_critter_added(self):
+    return f"\t* {self.animals[-1].name} the {self.animals[-1].species}"
