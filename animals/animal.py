@@ -12,7 +12,7 @@ class Animal:
     return f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}'
 
   def __str__(self):
-    return f'My name is {self.name} and I am a {self.species}'
+    return f'{self.name} the {self.species}'
 
   @property
   def chip_number(self):

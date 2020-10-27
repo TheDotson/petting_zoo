@@ -1,7 +1,9 @@
-from animals import Animal
+from .animal import Animal
 from datetime import date
+from movements import Swimming, Slithering
 
-class Alligator(Animal):
+class Alligator(Animal, Swimming, Slithering):
   def __init__(self, name, species, food, chip_num):
-    super().__init__(name, species, food, chip_num)
-    self.swimming = True
+    Animal.__init__(self, name, species, food, chip_num)
+    Swimming.__init__(self)
+    Slithering.__init__(self)

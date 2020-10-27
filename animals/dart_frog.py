@@ -1,7 +1,8 @@
-from animals import Animal
+from .animal import Animal
 from datetime import date
+from movements import Slithering
 
-class Dart_Frog(Animal):
+class Dart_Frog(Animal, Slithering):
   def __init__(self, name, species, food, chip_num):
-    super().__init__(name, species, food, chip_num)
-    self.slithering = True
+    Animal.__init__(self, name, species, food, chip_num)
+    Slithering.__init__(self)
